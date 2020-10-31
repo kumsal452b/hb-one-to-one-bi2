@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.MapsId;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -24,7 +25,8 @@ public class InstructorDetail {
 		@Column(name="hobby")
 		private String hobby;
 		
-		@OneToOne(mappedBy="instructor_detail",cascade=CascadeType.ALL)
+
+		@OneToOne(mappedBy="instructorDetail",cascade=CascadeType.ALL)
 		private Instructor theInstructor;
 
 		public InstructorDetail() {

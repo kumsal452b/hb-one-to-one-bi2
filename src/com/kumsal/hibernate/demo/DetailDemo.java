@@ -14,6 +14,7 @@ public class DetailDemo {
 		SessionFactory sessionFactory=new Configuration()
 				.configure("hibernate.cfg.xml")
 				.addAnnotatedClass(InstructorDetail.class)
+				.addAnnotatedClass(Instructor.class)
 				.buildSessionFactory();
 		
 		Session session=sessionFactory.getCurrentSession();
