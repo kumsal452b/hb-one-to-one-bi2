@@ -55,7 +55,14 @@ public class InstructorDetail {
 		public void setHobby(String hobby) {
 			this.hobby = hobby;
 		}
+		
 
+		public Instructor getTheInstructor() {
+			return theInstructor;
+		}
+		public void setTheInstructor(Instructor theInstructor) {
+			this.theInstructor = theInstructor;
+		}
 		@Override
 		public String toString() {
 			return "InstructorDetail [id=" + id + ", youTube=" + youTube + ", hobby=" + hobby + "]";
