@@ -13,7 +13,7 @@ public class DetailDemo {
 	public static void main(String[] args) {
 		SessionFactory sessionFactory=new Configuration()
 				.configure("hibernate.cfg.xml")
-				.addAnnotatedClass(Instructor.class)
+		
 				.addAnnotatedClass(InstructorDetail.class)
 				.buildSessionFactory();
 		
@@ -21,7 +21,12 @@ public class DetailDemo {
 		
 		session.beginTransaction();
 		try {
-			int theId=2;
+			int theId=3;
+			InstructorDetail theTest=session.get(InstructorDetail.class, theId);
+			
+			System.out.println("the insructor detail "+theTest);
+			
+			System.out.println("the instructor "+theTest.getTheInstructor());
 			
 			session.getTransaction().commit();
 			session.close();
