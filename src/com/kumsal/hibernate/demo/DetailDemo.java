@@ -13,7 +13,6 @@ public class DetailDemo {
 	public static void main(String[] args) {
 		SessionFactory sessionFactory=new Configuration()
 				.configure("hibernate.cfg.xml")
-		
 				.addAnnotatedClass(InstructorDetail.class)
 				.buildSessionFactory();
 		

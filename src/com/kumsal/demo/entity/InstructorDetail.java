@@ -28,7 +28,7 @@ public class InstructorDetail {
 		private Instructor theInstructor;
 
 		public InstructorDetail() {
-			// TODO Auto-generated constructor stub
+			
 		}
 		public InstructorDetail(String youTube, String hobby) {
 			this.youTube = youTube;
